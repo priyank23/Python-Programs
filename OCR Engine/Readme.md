@@ -15,7 +15,7 @@ Using `python-tesseract` library to extract text from image
 	##### Options
 	* -i IMAGE, --image IMAGE		| filepath of image to be used
 	* -th value, --threshold value		| Select the threshold value for binarisation (0-255)
-	* -p <option>, --preprocess <option>	| Select the method of preprocessing
+	* -p option, --preprocess option	| Select the method of preprocessing
 		###### Preprocessing Options
 		* 'erode'			| Performs erosion 
 		* 'dilate'			| Performs dilation 
