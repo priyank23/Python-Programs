@@ -11,19 +11,19 @@ Using `python-tesseract` library to extract text from image
 
 ### How to use
 
-* `python3 pyText.py -i <image_path>`
+* `python3 pyText.py -i <image_path> [options ...]`
 	##### Options
-	* -i IMAGE, --image IMAGE		filepath of image to be used
-	* -th value, --threshold value		Select the threshold value for binarisation (0-255)
-	* -p <option>, --preprocess <option>	Select the method of preprocessing
+	* -i IMAGE, --image IMAGE		| filepath of image to be used
+	* -th value, --threshold value		| Select the threshold value for binarisation (0-255)
+	* -p <option>, --preprocess <option>	| Select the method of preprocessing
 		###### Preprocessing Options
-		** 'erode'			Performs erosion
-		** 'dilate'			Performs dilation
-		** 'open'			Performs Morphological opening
-		** 'close'			Performs Morphological closing
-	* -x X					x-dimension of kernel for preprocessing
-	* -y Y					y-dimension of kernel for preprocessing
-	*-h, --help				Shows possible options for execution
+		* 'erode'			| Performs erosion 
+		* 'dilate'			| Performs dilation 
+		* 'open'			| Performs Morphological opening
+		* 'close'			| Performs Morphological closing
+	* -x X					| x-dimension of kernel for preprocessing
+	* -y Y					| y-dimension of kernel for preprocessing
+	* -h, --help				| Shows possible options for execution
 
 ### Post-processing Steps (Plan)
 * [ ] To convert text into speech.
