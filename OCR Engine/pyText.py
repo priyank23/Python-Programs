@@ -90,6 +90,9 @@ def main(args):
 
     print('The detected text is: ')
     print(text)
+    file = open(r"Result", "w")
+    file.write(text)
+    file.close()
 
 args = parse()
 print(args)
