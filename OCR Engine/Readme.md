@@ -1,6 +1,18 @@
 ## OCR Engine
 
-Using `python-tesseract` library to extract text from image
+Using `python-tesseract` library to extract text from image and make the device speak the text out loud.
+
+### Libraries Used
+
+* `Pillow` - For reading the input file
+* `numpy`  - For custom preprocessing
+* `argparse`- For parsing the arguments
+* `opencv-python` - For preprocessing
+* `socket` - For checking internet connection availability
+* `pytesseract` - For converting image to text
+* `gtts` - For converting text to audio (online mode)
+* `playsound` - For playing the audio
+* `pyttsx3` - For converting text to audio and play it. (offline mode)
 
 ### Preprocessing Steps
 
@@ -26,4 +38,4 @@ Using `python-tesseract` library to extract text from image
 	* -h, --help				| Shows possible options for execution
 
 ### Post-processing Steps (Plan)
-* [ ] To convert text into speech.
+* [x] To convert text into speech.

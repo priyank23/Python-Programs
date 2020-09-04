@@ -3,6 +3,20 @@ import pytesseract
 import numpy as np
 import argparse
 import cv2
+import socket
+
+def isConnected():
+    try:
+        # connect to the host -- tells us if the host is actually
+        # reachable
+        sock = socket.create_connection(("www.google.com", 80))
+        if sock is not None:
+            sock.close
+        return True
+    except OSError:
+        pass
+    return False
+
 def grayScale(image):
     return np.dot(image[..., :3], [0.299, 0.587, 0.114])
 
@@ -93,6 +107,20 @@ def main(args):
     file = open(r"Result", "w")
     file.write(text)
     file.close()
+    
+    if isConnected():
+        from gtts import gTTS
+        gtts = gTTS(text, lang='en')
+        gtts.save('text.mp3')
+        from playsound import playsound
+        playsound('text.mp3')
+    else:
+        import pyttsx3
+        engine = pyttsx3.init()
+        engine.setProperty('rate', 150)
+        engine.say(text)
+        engine.runAndWait()
+
 
 args = parse()
 print(args)
